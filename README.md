@@ -4,6 +4,9 @@
 ## 프로젝트 주제
 시각장애인을 위한 음료수 식별 서비스
 
+## 수집할 데이터, Data Feature 과제
+![데이터청년캠퍼스_3조_과제](https://user-images.githubusercontent.com/51364769/126651302-d02eb55f-6d7a-4512-95b8-57913b36cbed.png)
+
 ## 2차 발표 초안
 ![Team3ppt2-01](https://user-images.githubusercontent.com/51364769/126482917-293d9f33-72b3-4fac-b06a-8801651d3b2b.png)
 ![Team3ppt2-02](https://user-images.githubusercontent.com/51364769/126482924-735f7863-2251-4560-9532-8c3a41ce6d55.png)
