@@ -23,5 +23,7 @@ Training Accuracy는 다음과 같음.
 #### 3. NTS-Net
 논문(Learning to Navigate for Fine-grained Classification)과 Github을 보고 코드 뜯고 주석 다면서 모델 이해 중 
 이것은 중간과정이므로 이후 깔끔한 version으로 업로드 할 예정
+
 논문: https://openaccess.thecvf.com/content_ECCV_2018/papers/Ze_Yang_Learning_to_Navigate_ECCV_2018_paper.pdf 
+
 Github: https://github.com/yangze0930/NTS-Net
