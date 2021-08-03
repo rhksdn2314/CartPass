@@ -4,3 +4,4 @@
  - Scrutinizer: Navigator에서 제안된 영역 면밀히 조사
 * 새로운 손실함수 제안
 * https://github.com/yangze0930/NTS-Net
+* https://github.com/He-Jian/NTS-Net-keras
