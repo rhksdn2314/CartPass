@@ -12,3 +12,10 @@
 ### 2. Object Detection using Fine-grained Feature Extraction and Localization  
   
 ### 3. A coarse-to-fine capsule network for fine-grained image categorization  
+Uses coarse-to-fine Capsule Network (CTS-CapsNet) arranged in Region Proposal Network (RPN) that works in multiple scales. 
+Expert CapsNet overal pipeline: 
+- multi-scale convolutional layer (MS-CONV)
+- primary capsules layer (PrimCaps)
+- entity capsules layer 
+- DropConnect layer
+- Decoder layer
