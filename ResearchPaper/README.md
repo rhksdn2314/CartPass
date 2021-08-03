@@ -8,11 +8,12 @@
 * https://github.com/yangze0930/NTS-Net
 * https://github.com/He-Jian/NTS-Net-keras
 * https://github.com/nicolalandro/ntsnet-cub200
+
 논문 목차
-#### 1. Introduction
-#### 2. Related Work(Fine-grained classification, Object detection, Learning to Rank)
-#### 3. Methods(Approach Overview,  Navigator and Teacher,  Scrutinizer, Network Architecture, Loss function and Optimization)
-#### 4. Experiments
+#####  1. Introduction
+#####  2. Related Work(Fine-grained classification, Object detection, Learning to Rank)
+#####  3. Methods(Approach Overview,  Navigator and Teacher,  Scrutinizer, Network Architecture, Loss function and Optimization)
+#####  4. Experiments
   
 ### 2. Object Detection using Fine-grained Feature Extraction and Localization  
   
