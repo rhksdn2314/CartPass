@@ -8,3 +8,7 @@
 * https://github.com/yangze0930/NTS-Net
 * https://github.com/He-Jian/NTS-Net-keras
 * https://github.com/nicolalandro/ntsnet-cub200
+  
+2. Object Detection using Fine-grained Feature Extraction and Localization  
+  
+3. A coarse-to-fine capsule network for fine-grained image categorization  
