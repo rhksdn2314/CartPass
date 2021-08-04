@@ -3,8 +3,7 @@
 
 ## 프로젝트 주제
 음료수 식별 서비스  
-  
-## 모델 공부
+
 ## Related Model List
 ### 1. Densenet
 ### 2. NTS-net
