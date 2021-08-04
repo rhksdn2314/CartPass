@@ -1,4 +1,4 @@
-## Fine-grained Classification 관련 논문 서치 및 요약  
+## Fine-grained Classification 관련 논문 서치 및 요약본 업로드  
   
 ### 1. 논문명 : Learning to navigate for fine-grained Classification
  - Navigator: 모델의 초점을 가장 유용한 영역에 맞춤. 이미지의 각 영역에 대해 영역이 얼마나 유용한지 예측하고 예측은 가장 유용한 영역 제안
@@ -26,4 +26,4 @@ Expert CapsNet overal pipeline:
 - DropConnect layer
 - Decoder layer
 
-### 4. 논문명 : A coarse-to-fine capsule network for fine-grained image categorization  
+### 4. 논문명 : Dynamic Routing Between Capsules
