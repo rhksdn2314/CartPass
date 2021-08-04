@@ -27,3 +27,6 @@ Expert CapsNet overal pipeline:
 - Decoder layer
 
 ### 4. 논문명 : Dynamic Routing Between Capsules
+- Capsule
+- CapsNet
+- Dynamic Routing
