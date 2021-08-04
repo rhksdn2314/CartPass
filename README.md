@@ -5,6 +5,13 @@
 음료수 식별 서비스  
   
 ## 모델 공부
+## Related Model List
+1. Densenet
+2. NTS-net
+3. Dynamic Routing Capsnet
+4. CAP
++ Attention, MM, FRL, Humans in the loop
+
 ### 1. Densenet
 - Feature map끼리의 Concatenation을 이용
 - 이점
