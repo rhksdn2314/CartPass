@@ -2,7 +2,7 @@
 2021 데이터청년캠퍼스 고려대학교과정 3조입니다.
 
 ## 프로젝트 주제
-음료수 식별 서비스  
+음료수 식별 서비스 (무인 판매대)
 
 ## Related Model List
 ### 1. Densenet
@@ -10,6 +10,8 @@
 ### 3. Dynamic Routing Capsnet
 ### 4. CAP
 ### \+ Attention, MM, FRL, Humans in the loop
+  
+## Data Augmentation - Crop, Flip, Rotation, Blur or Noise
 ---
 ### 1. Densenet
 - Feature map끼리의 Concatenation을 이용
