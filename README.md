@@ -23,7 +23,7 @@
 	- Parameter 수 절약
 - DenseNet-BC : bottleneck layer와 θ<1인 transition layer를 모두 사용하는 모델
   - Accuracy (CIFAR-100 Dataset) : DenseNet-BC(82.82), DenseNet-BC-190, S=4(87.44)
-- DenseNet161 + MM + FRL : MinMax, Feature Redundancy Loss 사용
+- DenseNet161 + MM + FRL : Minimax, Feature Redundancy Loss 사용
   - Accuracy : 95.2(Stanford Cars Dataset), 94.0(FGVC Aircraft)
   
 ## 수집할 데이터, Data Feature 과제
