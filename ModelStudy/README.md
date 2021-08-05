@@ -12,7 +12,7 @@ Training/Validation 데이터셋은 aihub의 '상품 이미지 데이터' 사용
   
 #### 2. transferLearning using Resnet34  
 Restnet34 모델의 출력 뉴런 수를 10개로 교체하여 마지막 레이어 다시 학습  
-Test Accuracy: 77.92  
+7th epoch - Test Accuracy: 77.92  
 validation 과정을 추가함  
   
 <img width="522" alt="KakaoTalk_20210805_131219234" src="https://user-images.githubusercontent.com/51364769/128291425-b650a2c9-3c54-41e5-988d-0aed7f23da1a.png">
