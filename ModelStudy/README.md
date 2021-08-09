@@ -13,6 +13,7 @@ Training/Validation 데이터셋은 aihub의 '상품 이미지 데이터' 사용
   
 ## 1. CNN  
   
+---
 ## 2. TransferLearning using Resnet34  
 ### V1 - Resnet34의 fc layer 변경
 - Class 수 : 10
@@ -24,7 +25,8 @@ Training/Validation 데이터셋은 aihub의 '상품 이미지 데이터' 사용
 - Highest Accuracy : 52.38 %
 <img width="294" alt="dt1" src="https://user-images.githubusercontent.com/51364769/128653220-0f40d0c6-d5fd-4715-ab36-46e1fc5bd60e.JPG">
   
-## 2. TransferLearning using Densenet161  
+---
+## 3. TransferLearning using Densenet161  
 ### V1 - Densenet161의 classifier layer 변경
 - Class 수 : 10
 - Highest Accuracy : 90.90 %
@@ -35,6 +37,7 @@ Training/Validation 데이터셋은 aihub의 '상품 이미지 데이터' 사용
 - Highest Accuracy : 50.31 %
 <img width="294" alt="dt4" src="https://user-images.githubusercontent.com/51364769/128653645-8f5298d3-808e-4705-8ed0-5f3232697097.JPG">
   
+---
 ## 4. TransferLearning using Googlenet  
 ### V1 - Google의 fc layer 변경
 - Class 수 : 10
@@ -45,7 +48,8 @@ Training/Validation 데이터셋은 aihub의 '상품 이미지 데이터' 사용
 - Class 수 : 30
 - Highest Accuracy : 67.70 %
 <img width="294" alt="dt8" src="https://user-images.githubusercontent.com/51364769/128653868-471f2cbb-4f62-45f4-94ec-7ad74d8d9087.png">
-
+  
+---
 ## 5. NTS-Net
 논문(Learning to Navigate for Fine-grained Classification)과 Github을 보고 코드 뜯고 주석 다면서 모델 이해 중 
 이것은 중간과정이므로 이후 깔끔한 version으로 업로드 할 예정
