@@ -8,7 +8,7 @@
 ### 1. Densenet
 ### 2. NTS-net
 ### 3. Dynamic Routing Capsnet
-### 4. CAP
+### ~~4. CAP~~
 ### \+ Attention, MM, FRL, Humans in the loop
   
   
