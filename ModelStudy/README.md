@@ -1,4 +1,4 @@
-## 딥러닝을 이용한 classification model 만들기를 공부하고 익숙해져보자.
+# 딥러닝을 이용한 classification model 만들기를 공부하고 익숙해져보자.
 class 수: 10 (임의로 10개 음료 상품 선정)  
 Training 데이터셋 크기: 1140 (각 114장)  
 Test 데이터셋 크기: 236  
@@ -7,10 +7,10 @@ Validation 데이터셋 크기: 150 (각 15장)
 Training/Validation 데이터셋은 aihub의 '상품 이미지 데이터' 사용  
 
 ---
-
-#### 1. CNN  
   
-#### 2. TransferLearning using Resnet34  
+## 1. CNN  
+  
+## 2. TransferLearning using Resnet34  
 ### V1 - Resnet34의 fc layer 변경
 - Class 수 : 10
 - Training Dataset : 1140
@@ -20,7 +20,7 @@ Training/Validation 데이터셋은 aihub의 '상품 이미지 데이터' 사용
 <img width="294" alt="KakaoTalk_20210805_131915289" src="https://user-images.githubusercontent.com/51364769/128291423-e5472fde-f043-4d98-b959-703a6840819e.png">
 <img width="299" alt="KakaoTalk_20210805_133126278" src="https://user-images.githubusercontent.com/51364769/128291422-45e74a47-ac76-417b-91ab-6999ede01f0d.png">
   
-### V2 - V1과 구조 동일
+### V2
 - Class 수 : 30
 - Training Dataset : 3420
 - Test Dataset : 483
@@ -28,8 +28,44 @@ Training/Validation 데이터셋은 aihub의 '상품 이미지 데이터' 사용
 - Highest Accuracy : 52.38 %
 <img width="294" alt="dt1" src="https://user-images.githubusercontent.com/51364769/128653220-0f40d0c6-d5fd-4715-ab36-46e1fc5bd60e.JPG">
 <img width="294" alt="dt2" src="https://user-images.githubusercontent.com/51364769/128653221-dbad29e2-df38-4932-b643-3cf1e059afc8.JPG">
+  
+## 2. TransferLearning using Densenet161  
+### V1 - Densenet161의 classifier layer 변경
+- Class 수 : 10
+- Training Dataset : 1140
+- Test Dataset : 154
+- Validation Dataset : 150
+- Highest Accuracy : 90.90 %
+<img width="294" alt="dt3" src="https://user-images.githubusercontent.com/51364769/128653562-fbe6cba5-c090-4bb0-8a0e-8e0bfdaf1604.JPG">
+  
+### V2
+- Class 수 : 30
+- Training Dataset : 3420
+- Test Dataset : 483
+- Validation Dataset : 450
+- Highest Accuracy : 50.31 %
+<img width="294" alt="dt4" src="https://user-images.githubusercontent.com/51364769/128653645-8f5298d3-808e-4705-8ed0-5f3232697097.JPG">
+<img width="294" alt="dt5" src="https://user-images.githubusercontent.com/51364769/128653646-810a46af-2914-4e49-8ea4-1e704c3d0906.JPG">
+  
+## 4. TransferLearning using Googlenet  
+### V1 - Google의 fc layer 변경
+- Class 수 : 10
+- Training Dataset : 1140
+- Test Dataset : 154
+- Validation Dataset : 150
+- Highest Accuracy : 90.25 %
+<img width="294" alt="dt7" src="https://user-images.githubusercontent.com/51364769/128653757-421cef09-ec5e-4fa2-a6f5-ea6dd9c05de9.JPG">
+  
+### V2
+- Class 수 : 30
+- Training Dataset : 3420
+- Test Dataset : 483
+- Validation Dataset : 450
+- Highest Accuracy : 67.70 %
+<img width="294" alt="dt8" src="https://user-images.githubusercontent.com/51364769/128653868-471f2cbb-4f62-45f4-94ec-7ad74d8d9087.png">
+<img width="294" alt="dt9" src="https://user-images.githubusercontent.com/51364769/128653895-06a1c5a4-0f30-4fab-86e6-c36227c70d5a.png">
 
-#### 3. NTS-Net
+## 5. NTS-Net
 논문(Learning to Navigate for Fine-grained Classification)과 Github을 보고 코드 뜯고 주석 다면서 모델 이해 중 
 이것은 중간과정이므로 이후 깔끔한 version으로 업로드 할 예정
 
