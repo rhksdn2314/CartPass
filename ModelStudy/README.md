@@ -1,16 +1,14 @@
 # 딥러닝을 이용한 classification model 만들기를 공부하고 익숙해져보자.
-class 수: 10 (임의로 10개 음료 상품 선정)  
-Training 데이터셋 크기: 1140 (각 114장)  
-Test 데이터셋 크기: 236  
-Validation 데이터셋 크기: 150 (각 15장)  
-  
 Training/Validation 데이터셋은 aihub의 '상품 이미지 데이터' 사용  
 - Training Data per Class : 114장
 - Validation Data per Class : 15장
 - Test Data per Class: 약 16장
-
----
   
+### Highest Accuracy Model
+- 10 Classes : Densenet161 (90.90 %)
+- 30 Classes : Googlenet (67.70 %)
+  
+---
 ## 1. CNN  
   
 ---
