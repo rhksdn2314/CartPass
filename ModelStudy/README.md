@@ -49,8 +49,8 @@ Training/Validation 데이터셋은 aihub의 '상품 이미지 데이터' 사용
   
 ---
 ## 5. NTS-Net
-논문(Learning to Navigate for Fine-grained Classification)과 Github을 보고 코드 뜯고 주석 다면서 모델 이해 중 
-이것은 중간과정이므로 이후 깔끔한 version으로 업로드 할 예정
+- Class 수 : 30
+- Highest Accuracy : 93.0 %
 
 논문: https://openaccess.thecvf.com/content_ECCV_2018/papers/Ze_Yang_Learning_to_Navigate_ECCV_2018_paper.pdf 
 
