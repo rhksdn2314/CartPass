@@ -6,7 +6,7 @@ Training/Validation 데이터셋은 aihub의 '상품 이미지 데이터' 사용
   
 ### Highest Accuracy Model
 - 10 Classes : Densenet161 (90.90 %)
-- 30 Classes : Googlenet (67.70 %)
+- 30 Classes : NTS-Net (93.00 %)
   
 ---
 ## 1. CNN  
@@ -49,9 +49,13 @@ Training/Validation 데이터셋은 aihub의 '상품 이미지 데이터' 사용
   
 ---
 ## 5. NTS-Net
-논문(Learning to Navigate for Fine-grained Classification)과 Github을 보고 코드 뜯고 주석 다면서 모델 이해 중 
-이것은 중간과정이므로 이후 깔끔한 version으로 업로드 할 예정
+- Class 수 : 30
+- Highest Accuracy : 93.0 %
+
+<img width="294" alt="dt8" src="https://user-images.githubusercontent.com/84132245/129306822-5ff825d6-4ad7-433f-925d-9483a5c2655d.png">
+<img width="294" alt="dt8" src="https://user-images.githubusercontent.com/84132245/129306812-e25b7e65-ed10-432b-bc8d-89cef69ac767.png">
 
 논문: https://openaccess.thecvf.com/content_ECCV_2018/papers/Ze_Yang_Learning_to_Navigate_ECCV_2018_paper.pdf 
 
 Github: https://github.com/yangze0930/NTS-Net
+
