@@ -6,7 +6,7 @@ Training/Validation 데이터셋은 aihub의 '상품 이미지 데이터' 사용
   
 ### Highest Accuracy Model
 - 10 Classes : Densenet161 (90.90 %)
-- 30 Classes : Googlenet (67.70 %)
+- 30 Classes : NTS-Net (93.00 %)
   
 ---
 ## 1. CNN  
