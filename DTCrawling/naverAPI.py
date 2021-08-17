@@ -1,13 +1,23 @@
 import urllib.request
 import json
+import os
 
 def main():
     f = open("nameList.txt", "r")
     nameList = f.read().split(',')
+    createFolder("./" + "download")
 
     for name in nameList:
+        createFolder("./download/" + name)
         download_image(name)
 
+
+def createFolder(directory):
+    try:
+        if not os.path.exists(directory):
+            os.makedirs(directory)
+    except OSError:
+        print('Error: Creating' + directory)
 
 def download_image(name):
     ## 네이버 api 사용
@@ -56,6 +66,7 @@ def download_image(name):
         rescode = response.getcode()
         if (rescode == 200):
             response_body = response.read()
+
             py_rt = json.loads(response_body.decode('utf-8'))
             # print(py_rt)
             for _ in py_rt["items"]:
@@ -67,3 +78,5 @@ def download_image(name):
             print("Error Code:" + rescode)
     except:
         print("네이버 쇼핑 이미지 검색 오류 - " + name)
+
+main()
