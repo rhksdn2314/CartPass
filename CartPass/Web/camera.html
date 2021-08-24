@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Free Pass</title>
+        <link rel="stylesheet" href="/static/css/camera.css">
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+
+
+    </head>
+    <body>
+        <h1 class="ffont"><a href="/">Free Pass<img src="https://img.icons8.com/material-outlined/75/000000/favorite-cart.png"></a></h1>
+        <div class="grid-container0">
+            <h2 class="font">CAMERA</h2>
+            <h2 class="font">제품 LIST</h2>
+        </div>
+
+
+        <div class="grid-container">
+            <div id="container" style="border: 4px solid black;margin-lef:10%;">
+                <video id="video" width="841" height="700" autoplay></video>
+                <button id="snap">Snap Photo</button>
+                <canvas id="canvas" width="640" height="480"></canvas></div>
+
+
+                 <!-- Code to handle taking the snapshot and displaying it locally -->
+                <script language="JavaScript">
+                    // Grab elements, create settings, etc.
+                    var video = document.getElementById('video');
+                    // Get access to the camera!
+                    if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+                        navigator.mediaDevices.getUserMedia({
+                            video: true
+                        }).then(function(stream) {
+                            //video.src = window.URL.createObjectURL(stream);
+                            video.srcObject = stream;
+                            video.play();
+                        });
+                    }
+                    // Elements for taking the snapshot
+                    var canvas = document.getElementById('canvas');
+                    var context = canvas.getContext('2d');
+                    var video = document.getElementById('video');
+                </script>
+                <script>
+                    document.getElementById("snap").addEventListener("click", function() {
+                        context.drawImage(video, 0, 0, 640, 480);
+                        // get image data as string
+                        const imageString = canvas.toDataURL();
+                        console.log(imageString)
+                        // send image to server
+                        $.ajax({
+                            type: "POST",
+                            url: "http://e4cb-34-125-216-151.ngrok.io",
+                            data: {"file":imageString},
+                            dataType:'JSON'
+                        })
+                        .done(function (data) {
+                        alert("Data Saved: " + data.result+ data.price);
+                        const itemDict = {};
+                        const numDict = {};
+                        const whole_price = 0;
+                        for (let i = 0; i < data.length; i++) {
+                          var item = data.price[i];
+                          var item_result = data.result[i];
+                          var item_num=1
+                          whole_price=whole_price + data.price[i]
+                          if (!(item_result in itemDict)){
+                              itemDict[item_result] = item;
+                              numDict[item_result] = item_num;
+                          } else{
+                              numDict[item_result]=item_num +1
+                              itemDict[item_result] = data.price[i]*(item_num +1)
+                          }
+                        }
+
+                        });
+                    });
+
+
+
+
+                </script>
+            <div style="border: 4px solid black;">2
+
+            </div>
+
+        </div>
+
+
+
+    </body>
+</html>
