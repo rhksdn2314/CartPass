@@ -17,7 +17,6 @@
             <h2 class="font">제품 LIST</h2>
         </div>
 
-
         <div class="grid-container">
             <div id="container" style="border: 4px solid black;margin-lef:10%;">
                 <button id="snap">Snap Photo</button>
@@ -31,6 +30,8 @@
                     <th>제품명</th>
                     <th>가격</th>
                     <th>수량</th>
+                </table>
+                <div><h6 id='sum' style="text-align: left; margin-left: 5%;">합계 : 0</h6></div>
             </div>
                  <!-- Code to handle taking the snapshot and displaying it locally -->
                 <script language="JavaScript">
@@ -55,6 +56,8 @@
                     var itemList = new Array();
                     var priceList = new Array();
                     var count = 0;
+                    var sum = 0;
+
                     const itemContainer = document.getElementById('itemContainer')
 
                     document.getElementById("snap").addEventListener("click", function() {
@@ -72,6 +75,7 @@
                         .done(function (data) {
                             itemList[count] = data.result
                             priceList[count] = data.price
+                            sum+=data.price
                             
                             const table = document.getElementById('table');
 
@@ -92,12 +96,15 @@
                                 newCell2.innerText = priceList[count];
                                 newCell3.innerText = 1;
                             }
+                            document.getElementById('sum').innerText = '합계 : ' + sum + '(원)'
                         });
                     });
                 </script>
                 <script>
                     document.getElementById("test").addEventListener("click", function() {
                         var res = '김치사발면'
+                        sum+=1000
+
                         const table2 = document.getElementById('table');
 
                         if(itemList.includes(res)){
@@ -119,13 +126,9 @@
                             newCell02.innerText = priceList[count];
                             newCell03.innerText = 1;
                         }
+                        document.getElementById('sum').innerText = '합계 : ' + sum + '(원)'
                     });
-
                 </script>
-
         </div>
-
-
-
     </body>
 </html>
