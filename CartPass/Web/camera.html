@@ -96,19 +96,9 @@
 
                 <script>
                     document.getElementById("test").addEventListener("click", function() {
-                        const imageString = canvas.toDataURL();
-                        console.log(imageString)
-                        // send image to server
-                        $.ajax({
-                            type: "POST",
-                            url: "http://c84c-35-221-181-67.ngrok.io",
-                            data: {"file":imageString},
-                            dataType:'JSON'
-                        })
-                        .done(function (data) {
                         count += 1;
-                        itemList[count] = data.result
-                        priceList[count] = data.price
+                        itemList[count] = '김치사발면'
+                        priceList[count] = 1000
                         alert(itemList);
                         const table2 = document.getElementById('table');
   
