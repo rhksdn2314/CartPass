@@ -21,8 +21,9 @@
             <div id="container" style="border: 4px solid black;margin-lef:10%;">
                 <button id="snap">Snap Photo</button>
                 <button id="test">test Photo</button>
-                <video id="video" width="841" height="700" autoplay></video>
+                <input type = "file" accept = "image/*" capture = "camera">
                 <canvas id="canvas" width="640" height="480"></canvas>
+                
             </div>
 
             <div id = "itemContainer">
@@ -51,6 +52,15 @@
                     var canvas = document.getElementById('canvas');
                     var context = canvas.getContext('2d');
                     var video = document.getElementById('video');
+                </script>
+                <script>
+                    var camera = document.getElementById('camera');
+                    var frame = document.getElemetById('frame); 
+                                                       
+                    camera.addEventListener('change',function(e) {
+                        var file = e.targe.files[0];
+                        frame.src = URL.createObjectURL(file);
+                    });
                 </script>
                 <script>
                     var itemList = new Array();
