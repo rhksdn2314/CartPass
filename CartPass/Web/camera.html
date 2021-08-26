@@ -68,24 +68,27 @@
                         // send image to server
                         $.ajax({
                             type: "POST",
-                            url: "http://67fd-35-221-161-130.ngrok.io",
+                            url: "http://67ac-35-221-161-130.ngrok.io",
                             data: {"file":imageString},
                             dataType:'JSON'
                         })
                         .done(function (data) {
-                            itemList[count] = data.result
-                            priceList[count] = data.price
+                            
                             sum+=data.price
                             
                             const table = document.getElementById('table');
 
                             if(itemList.includes(data.result)){
+                                alert('hi')
                                 var index = itemList.indexOf(data.result);
                                 var cells = table.getElementsByTagName('td');
                                 cells[index * 3 - 1].innerText = Number(cells[index * 3 - 1].innerText) + Number(1);
                             }
                             else{
                                 count += 1;
+
+                                itemList[count] = data.result
+                                priceList[count] = data.price
 
                                 const newRow = table.insertRow();
                                 const newCell1 = newRow.insertCell(0);
