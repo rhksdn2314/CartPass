@@ -57,5 +57,4 @@ Training/Validation 데이터셋은 aihub의 '상품 이미지 데이터' 사용
 
 논문: https://openaccess.thecvf.com/content_ECCV_2018/papers/Ze_Yang_Learning_to_Navigate_ECCV_2018_paper.pdf 
 
-Github: https://github.com/yangze0930/NTS-Net
 
