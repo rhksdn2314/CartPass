@@ -14,9 +14,6 @@ Cart Pass (음료수 식별 서비스)
 ## Data Preporocessing - Resize with Padding  
 ## Data Augmentation - Rotation
 ---
-  
-## 수집할 데이터, Data Feature 과제
-![데이터청년캠퍼스_3조_과제](https://user-images.githubusercontent.com/51364769/126651302-d02eb55f-6d7a-4512-95b8-57913b36cbed.png)
 
 ## 발표자료
 
