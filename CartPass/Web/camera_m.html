@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Cart Pass</title>
+        <link rel="stylesheet" href="./css/camera.css">
+        <link rel="stylesheet" href="./css/table.css">
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
+    </head>
+    <body>
+        <h1 class="ffont"><a href="/">CART PASS<img src="https://img.icons8.com/material/75/000000/fast-cart.png"/></a></h1>
+        
+        <button id="snap">Load List</button>
+        <button id="test">test Photo</button>
+
+            <div id = "itemContainer" style="width: 100%">
+                <table id='table'>
+                    <th>제품명</th>
+                    <th>가격</th>
+                    <th>수량</th>
+                </table>
+                <h3 id='sum' style="text-align: left; margin-left: 12%; text">합계 : 0</h3>
+            </div>
+                <script>
+                    var itemList = new Array();
+                    var priceList = new Array();
+                    var count = 0;
+                    var sum = 0;
+
+                    const itemContainer = document.getElementById('itemContainer')
+
+                    document.getElementById("snap").addEventListener("click", function() {
+                        $.ajax({
+                            type: "POST",
+                            url: "http://184f-34-122-143-144.ngrok.io/list",
+                            data: {"id":"test"},
+                            dataType:'JSON'
+                        })
+                        .done(function (data) {
+                            
+                            sum+=Number(data.price)
+                            
+                            const table = document.getElementById('table');
+
+                            if(itemList.includes(data.result)){
+                                alert('hi')
+                                var index = itemList.indexOf(data.result);
+                                var cells = table.getElementsByTagName('td');
+                                cells[index * 3 - 1].innerText = Number(cells[index * 3 - 1].innerText) + Number(1);
+                            }
+                            else{
+                                count += 1;
+
+                                itemList[count] = data.result
+                                priceList[count] = data.price
+
+                                const newRow = table.insertRow();
+                                const newCell1 = newRow.insertCell(0);
+                                const newCell2 = newRow.insertCell(1);
+                                const newCell3 = newRow.insertCell(2);
+                              
+                                newCell1.innerText = itemList[count];
+                                newCell2.innerText = priceList[count];
+                                newCell3.innerText = 1;
+                            }
+                            document.getElementById('sum').innerText = '합계 : ' + sum + '(원)'
+                        });
+                    });
+                </script>
+                <script>
+                    document.getElementById("test").addEventListener("click", function() {
+                        var res = '김치사발면'
+                        sum+=1000
+
+                        const table2 = document.getElementById('table');
+
+                        if(itemList.includes(res)){
+                            var index = itemList.indexOf(res);
+                            var cells = table2.getElementsByTagName('td');
+                            cells[index * 3 - 1].innerText = Number(cells[index * 3 - 1].innerText) + Number(1);
+                        }
+                        else{
+                            count += 1;
+                            itemList[count] = res;
+                            priceList[count] = 1000;
+
+                            const newRow2 = table2.insertRow();
+                            const newCell01 = newRow2.insertCell(0);
+                            const newCell02 = newRow2.insertCell(1);
+                            const newCell03 = newRow2.insertCell(2);
+                          
+                            newCell01.innerText = itemList[count];
+                            newCell02.innerText = priceList[count];
+                            newCell03.innerText = 1;
+                        }
+                        document.getElementById('sum').innerText = '합계 : ' + sum + '(원)'
+                    });
+                </script>
+    </body>
+</html>
