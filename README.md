@@ -19,5 +19,4 @@ Cart Pass (음료수 식별 서비스)
 ---
 
 ## 발표자료
-
-
+<img width="80%" src="https://github.com/rhksdn2314/DataCampus2021_KU_Team3/files/7069022/0828.ppt.pdf"/>
