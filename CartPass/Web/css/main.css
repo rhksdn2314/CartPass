@@ -17,7 +17,7 @@
   display: block;
   font-family: 'Single Day', cursive;
   border-radius: 8px;
-  margin: 4% 35% 15px;
+  margin: 0% 35% 15px;
 }
 
 .btn-group .button:not(:last-child) {
