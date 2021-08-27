@@ -6,7 +6,7 @@
 Cart Pass (음료수 식별 서비스) 
 
 ## 데이터 처리
- Data Augmentation - Rotation
+ Data Augmentation - Rotation\
  Data Preporocessing - Resize with Padding  
 
 
